@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xen Soluciones Digitales</title>
+    <link rel="icon" href="Xenlogo.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; 
+            color: #fff; 
+        }
+        header {
+            background-color: #000; 
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header img {
+            width: 200px; 
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav a, nav button {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            background: none;
+            border: none;
+            font: inherit;
+            cursor: pointer;
+        }
+        nav a:hover, nav button:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .banner {
+            background-color: #fff; 
+            height: 50vh; 
+            text-align: center;
+            color: black; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content {
+      padding: 20px;
+      margin: 20px;
+    }
+    .style1 {
+      background-color: #2d2d2d; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 30%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+       
+        .add-review {
+            margin: 20px;
+            text-align: center;
+        }
+        .add-review input, .add-review textarea {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .add-review button {
+            background-color: #48a9a6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #000; 
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="content">
+            <img src="Xenbanner.png" style="width: 600px; height: auto;" alt="Logo de Xen Soluciones Digitales">
+        </div>
+        <div class="User-info">
+            <p id="usuario"></p>
+        </div>
+        <button class="logout-button" onclick="logout()">Cerrar Sesión</button>
+    </header>
+    <nav>
+        <a href="#home">Inicio</a>
+        <a href="#services">Servicios</a>
+        <a href="#about">Acerca de</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+    <div class="banner">
+        <h1>Bienvenido a Xen Soluciones Digitales</h1>
+    </div>
+    <div class="content">
+      <h2>Descripción de la Página</h2>
+      <p>Nosotros creamos, gestionamos y mantenemos herramientas avanzadas para la gestión de datos. Además, nos comprometemos con la educación, utilizando la tecnología para mejorar los procesos educativos y hacer que el aprendizaje sea más accesible.</p>
+      <h2>Galería de Imágenes</h2>
+      <div class="gallery">
+        <img src="https://th.bing.com/th/id/R.e79abd951eb22e30a607b16a912018a1?rik=aFxyiIGZo%2bBYqA&pid=ImgRaw&r=0" alt="Imagen 1">
+        <img src="https://th.bing.com/th/id/OIP.9N6Ao_4a6f0atvxGQL0UtQAAAA?w=320&h=164&rs=1&pid=ImgDetMain" alt="Imagen 2">
+        <img src="https://www.continentalpress.com/wp-content/uploads/2015/03/Incorporating-Technology-in-the-Classroom-1.jpg" alt="Imagen 3">
+      </div>
+        <div class="content style1">
+          <h3>Nuestros planes</h3>
+            <p> <strong>Plan inicial:</strong> Enfocado a instituciones basica-media las cuales apenas están incursionando en la tecnología y lo digital</p>
+            <h1>Incluye:</h1><ul> <li>Pagina web</li> <li>Plataforma LMS</li> <li> Google education</li></ul> 
+            <p>Precio <strong>$4'000.000/mes</strong></p>
+            <p> <strong>Plan intermedio</strong> Dirigido hacia las instituciones educativas básica-media y técnica los
+              cuales deben manejar sistemas de base de dato.</p>
+              <h1>Incluye:</h1><ul> <li>pagina web</li> <li>Gestión documental</li> <li>Plataforma LMS</li> <li> Google education</li> <li>Licencias de software</li></ul> 
+            Precio <strong>$4'500.000/mes</strong></p>
+            <p> <strong>Plan Smart</strong>Pensado a instituciones de educación técnica y superior las cuales necesitan
+              mayor capacidad en sus sistemas.</p>
+              <h1>Incluye:</h1><ul> <li>pagina web</li> <li>Gestión documental</li> <li> Google education</li> <li>Licencias de software</li><li>Plataforma LMS (campus)</li>
+                <li>Administración de redes de internet internas</li>
+                <li>Manejo de sistemas eléctricos</li>
+                <li>Gestión y mantenimiento de equipos tecnológicos</li></ul> 
+            Precio <strong>$6'000.000/mes</strong></p>
+            <p>*Cada servicio se puede pedir por separado teniendo un plan</p>
+    </div>
+    <div class="content add-review">
+        <h2>Agregar Reseña</h2>
+        <form id="reviewForm">
+            <input type="text" id="reviewUser" placeholder="Nombre de Usuario" readonly><br>
+            <input type="text" id="product" placeholder="Producto a Reseñar"><br>
+            <textarea id="reviewText" placeholder="Escribe tu reseña aquí..."></textarea><br>
+            <button type="submit">Enviar Reseña</button>
+        </form>
+    </div>
+    <script>
+        
+        const username = localStorage.getItem('username');
+        if (!username) {
+            window.location.href = 'login.html';
+        } else {
+            document.getElementById('usuario').innerText = `Bienvenido, ${username}!`;
+            document.getElementById('reviewUser').value = username;
+        }
+
+        
+        document.getElementById('reviewForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const product = document.getElementById('product').value;
+            const reviewText = document.getElementById('reviewText').value;
+
+            if (product && reviewText) {
+                const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+                reviews.push({ user: username, text: `${product}: ${reviewText}` });
+                localStorage.setItem('reviews', JSON.stringify(reviews));
+
+                alert(`Reseña enviada para el producto: ${product}`);
+                document.getElementById('reviewForm').reset();
+            } else {
+                alert('Por favor, completa todos los campos.');
+            }
+        });
+
+        function logout() {
+            localStorage.removeItem('username');
+            window.location.href = 'login.html';
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 Xen Soluciones Digitales. Todos los derechos reservados.</p>
+        <a href="https://www.Instagram.com">
+            <img src="Instagram_logo.png" alt="Instagram_logo" width="50px">
+          </a>
+          <a href="https://www.facebook.com">
+            <img src="facebooklogo.png" alt="facebook logo" width="55px">
+          </a>
+          <a href="https://www.x.com">
+            <img src="xlogo.avif" alt="x logo" width="50px">
+          </a>
+    </footer>
+</body>
+</html>
