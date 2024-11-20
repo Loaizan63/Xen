@@ -106,8 +106,8 @@
       const customer = customers.find(customer => customer.email === email && customer.password === password);
       
       if (customer) {
-        alert('Login exitoso.');
-        localStorage.setItem('username', email);
+        alert(`Login exitoso. Bienvenido/a, ${customer.username}!`);
+        localStorage.setItem('username', customer.username);
         window.location.href = 'Home.html'; 
       } else {
         alert('Correo electrónico o contraseña incorrecta.');
