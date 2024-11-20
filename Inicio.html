@@ -189,9 +189,8 @@
         <h3>Plan inicial</h3>
         <p>Enfocado a instituciones básicas y medias que apenas están incursionando en la tecnología y lo digital</p>
         <p class="price">Precio <strong>$4'000.000/mes</strong></p>
-        <input type="checkbox" id="plan1-toggle" class="menu-toggle">
-        <label for="plan1-toggle" class="menu-button">Incluye</label>
-        <div class="hidden-menu">
+          <button class="menu-button" onclick="toggleMenu('plan1-menu')">Incluye</button>
+        <div id="plan1-menu" class="hidden-menu">
           <ul>
             <li>Página web</li>
             <li>Plataforma LMS</li>
@@ -204,9 +203,8 @@
         <h3>Plan Intermedio</h3>
         <p>Dirigido hacia las instituciones educativas básicas, medias y técnicas, las cuales deben manejar sistemas de base de datos.</p>
         <p class="price">Precio <strong>$4'500.000/mes</strong></p>
-        <input type="checkbox" id="plan2-toggle" class="menu-toggle">
-        <label for="plan2-toggle" class="menu-button">Incluye</label>
-        <div class="hidden-menu">
+          <button class="menu-button" onclick="toggleMenu('plan2-menu')">Incluye</button>
+        <div id="plan2-menu" class="hidden-menu">
           <ul>
             <li>Página web</li>
             <li>Gestión documental</li>
@@ -221,9 +219,8 @@
         <h3>Plan Smart</h3>
         <p>Pensado para instituciones de educación técnica y superior que necesitan mayor capacidad en sus sistemas.</p>
         <p class="price">Precio <strong>$6'000.000/mes</strong></p>
-        <input type="checkbox" id="plan3-toggle" class="menu-toggle">
-        <label for="plan3-toggle" class="menu-button">Incluye</label>
-        <div class="hidden-menu">
+           <button class="menu-button" onclick="toggleMenu('plan3-menu')">Incluye</button>
+        <div id="plan3-menu" class="hidden-menu">
           <ul>
             <li>Página web</li>
           <li>Gestión documental</li>
@@ -243,7 +240,10 @@
   </div>
 
   <script>
-  
+   function toggleMenu(menuId) {
+      const menu = document.getElementById(menuId);
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
     function loadReviews() {
         const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
         const reviewsContainer = document.getElementById('reviewsContainer');
