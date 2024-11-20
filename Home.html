@@ -91,10 +91,14 @@
             cursor: pointer;
         }
         footer {
-            background-color: #000; 
-            color: white;
-            text-align: center;
-            padding: 10px 0;
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: relative; 
+      width: 100%;
+      bottom: 0;
+      border-image: auto;
         }
         .menu-toggle {
       display: none;
@@ -184,17 +188,13 @@
     <header>
         <div class="content">
             <img src="Xenbanner.png" style="width: 600px; height: auto;" alt="Logo de Xen Soluciones Digitales">
-        </div>
-        <div class="User-info">
-            <p id="usuario"></p>
-        </div>
-        <button class="logout-button" onclick="logout()">Cerrar Sesión</button>
     </header>
     <nav>
         <a href="#home">Inicio</a>
         <a href="#services">Servicios</a>
         <a href="#about">Acerca de</a>
         <a href="#contact">Contacto</a>
+        <button class="logout-button" onclick="logout()">Cerrar Sesión</button>
     </nav>
     <div class="banner">
         <h1>Bienvenido a Xen Soluciones Digitales</h1>
@@ -207,7 +207,8 @@
         <img src="https://th.bing.com/th/id/R.e79abd951eb22e30a607b16a912018a1?rik=aFxyiIGZo%2bBYqA&pid=ImgRaw&r=0" alt="Imagen 1">
         <img src="https://th.bing.com/th/id/OIP.9N6Ao_4a6f0atvxGQL0UtQAAAA?w=320&h=164&rs=1&pid=ImgDetMain" alt="Imagen 2">
         <img src="https://www.continentalpress.com/wp-content/uploads/2015/03/Incorporating-Technology-in-the-Classroom-1.jpg" alt="Imagen 3">
-    <div class="content add-review">
+      </div>    
+          <div class="content add-review">
         <h2>Agregar Reseña</h2>
         <form id="reviewForm">
             <input type="text" id="reviewUser" placeholder="Nombre de Usuario" readonly><br>
@@ -215,12 +216,11 @@
             <textarea id="reviewText" placeholder="Escribe tu reseña aquí..."></textarea><br>
             <button type="submit">Enviar Reseña</button>
         </form>
+    </div>
    <div class="plans-container">
-
       <div class="plan-card">
         <h3>Plan inicial</h3>
         <p>Enfocado a instituciones básicas y medias que apenas están incursionando en la tecnología y lo digital</p>
-        </ul> 
         <p class="price">Precio <strong>$4'000.000/mes</strong></p>
         <input type="checkbox" id="plan1-toggle" class="menu-toggle">
         <label for="plan1-toggle" class="menu-button">Incluye</label>
@@ -271,18 +271,30 @@
       </div>
     </div>
     
-    <p>*Cada servicio se puede pedir por separado, teniendo un plan</p>
-    <script>
-        
+     <div style="justify-self: center;"><p>*Cada servicio se puede pedir por separado, en cualquier plan. Aplican T&C</p></div>
+
+    <footer>
+        <p>&copy; 2024 Xen Soluciones Digitales. Todos los derechos reservados.</p>
+         <div id="Nombreusa"></div> 
+        <a href="https://www.Instagram.com">
+            <img src="Instagram_logo.png" alt="Instagram_logo" width="50px">
+          </a>
+          <a href="https://www.facebook.com">
+            <img src="facebooklogo.png" alt="facebook logo" width="55px">
+          </a>
+          <a href="https://www.x.com">
+            <img src="xlogo.avif" alt="x logo" width="50px">
+          </a>
+    </footer>
+        <script>
         const username = localStorage.getItem('username');
+        document.getElementById('Nombreusa').innerHTML = `Has iniciado sesión como "${username}"`;
         if (!username) {
             window.location.href = 'login.html';
         } else {
-            document.getElementById('usuario').innerText = `Bienvenido, ${username}!`;
             document.getElementById('reviewUser').value = username;
         }
 
-        
         document.getElementById('reviewForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const product = document.getElementById('product').value;
@@ -301,21 +313,12 @@
         });
 
         function logout() {
-            localStorage.removeItem('username');
-            window.location.href = 'login.html';
+            const confirmLogout = confirm("¿Estás seguro de que deseas cerrar sesión?");
+            if (confirmLogout) {
+                localStorage.removeItem('username');
+                window.location.href = 'login.html';
+            }
         }
     </script>
-    <footer>
-        <p>&copy; 2024 Xen Soluciones Digitales. Todos los derechos reservados.</p>
-        <a href="https://www.Instagram.com">
-            <img src="Instagram_logo.png" alt="Instagram_logo" width="50px">
-          </a>
-          <a href="https://www.facebook.com">
-            <img src="facebooklogo.png" alt="facebook logo" width="55px">
-          </a>
-          <a href="https://www.x.com">
-            <img src="xlogo.avif" alt="x logo" width="50px">
-          </a>
-    </footer>
 </body>
 </html>
