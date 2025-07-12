@@ -1,0 +1,11 @@
+
+  <section class="section" id="galeria">
+    <h2>Galería de proyectos</h2>
+    <div class="gallery">
+      <img src="https://th.bing.com/th/id/R.e79abd951eb22e30a607b16a912018a1?rik=aFxyiIGZo%2bBYqA&pid=ImgRaw&r=0" alt="Digital Solutions">
+      <img src="https://th.bing.com/th/id/OIP.9N6Ao_4a6f0atvxGQL0UtQAAAA?w=320&h=164&rs=1&pid=ImgDetMain" alt="UI design">
+      <img src="https://www.continentalpress.com/wp-content/uploads/2015/03/Incorporating-Technology-in-the-Classroom-1.jpg" alt="Digital Transformation">
+    </div>
+  </section>
+  
+

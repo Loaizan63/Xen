@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xen Soluciones Digitales</title>
+  <link rel="icon" href="../imagenes/Xenlogo.png" type="image/png">
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+
+<body>
+  <header>
+    <div class="content">
+      <img src="../imagenes/Xenbanner.png" style="width: 600px; height: auto;" alt="Logo de Xen Soluciones Digitales">
+  </header>
+  <nav>
+    <a href="#home">Inicio</a>
+    <a href="about.html">Acerca de</a>
+    <a href="#contact">Contacto</a>
+    <button class="logout-button" onclick="logout()">Cerrar Sesión</button>
+  </nav>
+  <div class="banner">
+    <h1>Bienvenido a Xen Soluciones Digitales</h1>
+  </div>
+  <div class="content">
+    <h2>Descripción de la Página</h2>
+    <p>Nosotros creamos, gestionamos y mantenemos herramientas avanzadas para la gestión de datos. Además, nos
+      comprometemos con la educación, utilizando la tecnología para mejorar los procesos educativos y hacer que el
+      aprendizaje sea más accesible.</p>
+    <h2>Galería de Imágenes</h2>
+    <div class="gallery">
+      <img src="https://th.bing.com/th/id/R.e79abd951eb22e30a607b16a912018a1?rik=aFxyiIGZo%2bBYqA&pid=ImgRaw&r=0"
+        alt="Imagen 1">
+      <img src="https://th.bing.com/th/id/OIP.9N6Ao_4a6f0atvxGQL0UtQAAAA?w=320&h=164&rs=1&pid=ImgDetMain"
+        alt="Imagen 2">
+      <img
+        src="https://www.continentalpress.com/wp-content/uploads/2015/03/Incorporating-Technology-in-the-Classroom-1.jpg"
+        alt="Imagen 3">
+    </div>
+    <div class="content add-review">
+      <h2>Agregar Reseña</h2>
+      <form id="reviewForm">
+        <input type="text" id="reviewUser" placeholder="Nombre de Usuario" readonly><br>
+        <input type="text" id="product" placeholder="Producto a Reseñar"><br>
+        <textarea id="reviewText" placeholder="Escribe tu reseña aquí..."></textarea><br>
+        <button type="submit">Enviar Reseña</button>
+      </form>
+    </div>
+    <div class="plans-container">
+      <div class="plan-card">
+        <h3>Plan inicial</h3>
+        <p>Enfocado a instituciones básicas y medias que apenas están incursionando en la tecnología y lo digital</p>
+        <p class="price">Precio <strong>$4'000.000/mes</strong></p>
+        <input type="checkbox" id="plan1-toggle" class="menu-toggle">
+        <label for="plan1-toggle" class="menu-button">Incluye</label>
+        <div class="hidden-menu">
+          <ul>
+            <li>Página web</li>
+            <li>Plataforma LMS</li>
+            <li>Google Education</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="plan-card">
+        <h3>Plan Intermedio</h3>
+        <p>Dirigido hacia las instituciones educativas básicas, medias y técnicas, las cuales deben manejar sistemas de
+          base de datos.</p>
+        <p class="price">Precio <strong>$4'500.000/mes</strong></p>
+        <input type="checkbox" id="plan2-toggle" class="menu-toggle">
+        <label for="plan2-toggle" class="menu-button">Incluye</label>
+        <div class="hidden-menu">
+          <ul>
+            <li>Página web</li>
+            <li>Gestión documental</li>
+            <li>Plataforma LMS</li>
+            <li>Google Education</li>
+            <li>Licencias de software</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="plan-card">
+        <h3>Plan Smart</h3>
+        <p>Pensado para instituciones de educación técnica y superior que necesitan mayor capacidad en sus sistemas.</p>
+        <p class="price">Precio <strong>$6'000.000/mes</strong></p>
+        <input type="checkbox" id="plan3-toggle" class="menu-toggle">
+        <label for="plan3-toggle" class="menu-button">Incluye</label>
+        <div class="hidden-menu">
+          <ul>
+            <li>Página web</li>
+            <li>Gestión documental</li>
+            <li>Google Education</li>
+            <li>Licencias de software</li>
+            <li>Plataforma LMS (campus)</li>
+            <li>Administración de redes de internet internas</li>
+            <li>Manejo de sistemas eléctricos</li>
+            <li>Gestión y mantenimiento de equipos tecnológicos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div style="justify-self: center;">
+      <p>*Cada servicio se puede pedir por separado, en cualquier plan. Aplican T&C</p>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Xen Soluciones Digitales. Todos los derechos reservados.</p>
+      <div id="Nombreusa"></div>
+      <a href="https://www.Instagram.com">
+        <img src="../imagenes/Instagram_logo.png" alt="Instagram_logo" width="50px">
+      </a>
+      <a href="https://www.facebook.com">
+        <img src="../imagenes/facebooklogo.png" alt="facebook logo" width="55px">
+      </a>
+      <a href="https://www.x.com">
+        <img src="../imagenes/Xenlogo.png" alt="x logo" width="50px">
+      </a>
+    </footer>
+
+    <script src="../javascript/home.js"></script>
+</body>
+
+</html>

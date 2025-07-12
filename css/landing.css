@@ -1,0 +1,22 @@
+/* =========================
+   VARIABLES Y BASE
+========================= */
+:root {
+  --color-azul: #00004F;
+  --color-cyan: #00FFFF;
+  --color-amarillo: #f3ca24;
+  --color-blanco: #ffffff;
+  --color-texto: #1c1c1c;
+  --color-fondo-claro: #f7f8fa;
+  --transicion: 0.3s ease;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }zz
+  100% { background-position: 0% 50%; }
+}
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradientMove 8s ease infinite;
+  }
