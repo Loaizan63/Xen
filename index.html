@@ -1,220 +1,483 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Xen Digital | Impulsa tu presencia digital</title>
-  <link rel="icon" href="https://digital-xen.com/uploads/svg/XenB.svg" type="image/svg+xml" />
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xen Digital | Impulsa tu Presencia Digital</title>
+    <link rel="icon" href="https://digital-xen.com/uploads/svg/XenB.svg" type="image/svg+xml" />
+
+    <script src="https://css.digital-xen.com/tailwind/dist/output.css"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <style>
-    strong:hover{
-      color: #00FFFF;
-      transition: color 0.3s ease;
-      transform: scale(5);
-    }
-  </style>
+    <script src="js/main.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://css.digital-xen.com/tailwind/dist/output.css" rel="stylesheet">
+
+
 </head>
-<body class="bg-[#00004F] text-[#1c1c1c] font-sans scroll-smooth">
 
-<!-- HEADER -->
-<header class="sticky top-0 z-[999] bg-black/20 backdrop-blur text-[#00FFFF] p-4 flex flex-col md:flex-row justify-between items-center">
-  <!-- Logo -->
-  <img src="https://digital-xen.com/uploads/svg/xen-horizontal-blanco.svg" alt="Logo de Xen Digital" class="w-[60%] md:w-[20%] p-3 md:mb-0" />
+<body class="bg-white text-[var(--color-texto-oscuro)] font-sans">
 
-  <!-- Botón toggle (visible solo en móviles) -->
-  <button id="menuToggle" class="md:hidden text-white focus:outline-none" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navMenu">
-    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
-  </button>
+    <header class="sticky top-0 z-[100] bg-gray-900/80 backdrop-blur-sm text-white p-4">
 
-  <!-- NAV -->
-  <nav id="navMenu" class="hidden md:flex gap-6 text-white font-semibold flex-wrap justify-center mt-4 md:mt-0">
-    <a href="#inicio" class="group relative">
-      <span class="hover:text-[#00004F] transition">Inicio</span>
-      <span class="absolute left-0 -bottom-1 w-0 h-[3px] bg-[#00FFFF] transition-all duration-300 group-hover:w-full"></span>
-    </a>
-    <a href="#quienes" class="group relative">
-      <span class="hover:text-[#00004F] transition">¿Quiénes Somos?</span>
-      <span class="absolute left-0 -bottom-1 w-0 h-[3px] bg-[#00FFFF] transition-all duration-300 group-hover:w-full"></span>
-    </a>
-    <a href="#planes" class="group relative">
-      <span class="hover:text-[#00004F] transition">Planes</span>
-      <span class="absolute left-0 -bottom-1 w-0 h-[3px] bg-[#00FFFF] transition-all duration-300 group-hover:w-full"></span>
-    </a>
-    <a href="#proyectos" class="group relative">
-      <span class="hover:text-[#00004F] transition">Proyectos</span>
-      <span class="absolute left-0 -bottom-1 w-0 h-[3px] bg-[#00FFFF] transition-all duration-300 group-hover:w-full"></span>
-    </a>
-    <a href="#contacto" class="group relative">
-      <span class="hover:text-[#00004F] transition">Contacto</span>
-      <span class="absolute left-0 -bottom-1 w-0 h-[3px] bg-[#00FFFF] transition-all duration-300 group-hover:w-full"></span>
-    </a>
-  </nav>
-</header>
-<main>
-  <!-- HERO -->
-  <section id="inicio" class="text-center text-[#00004F] py-20 px-4 bg-[#f7f8fa]">
-    <div class="max-w-2xl mx-auto flex flex-col gap-4">
-      <h1 class="text-4xl font-bold hover:text-[#f3ca24] hover:scale-105 hover:shadow-2xl transition duration-300">Impulsa tu negocio al mundo digital</h1>
-      <p class="text-xl">Soluciones digitales para crecer contigo</p>
-      <a href="#planes" class="inline-block bg-[#00FFFF] text-[#00004F] font-bold px-6 py-3 rounded-lg hover:bg-[#00dddd] transition">Conoce nuestros planes</a>
-    </div>
-  </section>
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#inicio">
+                <img src="https://digital-xen.com/uploads/svg/xen-horizontal-blanco.svg" alt="Logo de Xen Digital"
+                    class="w-40 md:w-48" />
+            </a>
 
-  <!-- QUIÉNES SOMOS -->
-  <section id="quienes" class="bg-[#f7f8fa] py-16 text-center px-6">
-    <h2 class="text-4xl font-bold text-[#00004F] mb-6 hover:text-[#f3ca24] hover:scale-105 hover:shadow-2xl transition duration-300">¿Quiénes somos?</h2>
-    <p class="max-w-3xl mx-auto text-lg leading-relaxed">
-      En <strong>Xen Digital</strong> diseñamos, desarrollamos e integramos plataformas digitales que impulsan a pequeñas y medianas empresas hacia la transformación digital. Automatizamos procesos, mejoramos la experiencia del cliente y fortalecemos tu presencia en internet.
-    </p>
-  </section>
+            <nav class="hidden md:flex gap-6 font-semibold items-center">
+                <a href="#inicio" class="group relative py-2"><span
+                        class="group-hover:text-[var(--color-acento)] transition">Inicio</span><span
+                        class="absolute left-0 bottom-0 w-0 h-0.5 bg-[var(--color-acento)] transition-all duration-300 group-hover:w-full"></span></a>
+                <a href="#quienes" class="group relative py-2"><span
+                        class="group-hover:text-[var(--color-acento)] transition">Nosotros</span><span
+                        class="absolute left-0 bottom-0 w-0 h-0.5 bg-[var(--color-acento)] transition-all duration-300 group-hover:w-full"></span></a>
+                <a href="#servicios" class="group relative py-2"><span
+                        class="group-hover:text-[var(--color-acento)] transition">Servicios</span><span
+                        class="absolute left-0 bottom-0 w-0 h-0.5 bg-[var(--color-acento)] transition-all duration-300 group-hover:w-full"></span></a>
+                <a href="#proyectos" class="group relative py-2"><span
+                        class="group-hover:text-[var(--color-acento)] transition">Proyectos</span><span
+                        class="absolute left-0 bottom-0 w-0 h-0.5 bg-[var(--color-acento)] transition-all duration-300 group-hover:w-full"></span></a>
+                <a href="#planes" class="group relative py-2"><span
+                        class="group-hover:text-[var(--color-acento)] transition">Planes</span><span
+                        class="absolute left-0 bottom-0 w-0 h-0.5 bg-[var(--color-acento)] transition-all duration-300 group-hover:w-full"></span></a>
+                <a href="#contacto"
+                    class="bg-[var(--color-acento)] text-black font-bold px-4 py-2 rounded-md hover:bg-[var(--color-acento-amarillo)] transition-colors">Contacto</a>
+            </nav>
 
-<!-- SECCIÓN PROYECTOS -->
-<section id="proyectos" class="relative bg-[#00004F] pt-16 pb-0 text-center px-6">
-  <!-- Título -->
-  <h2 class="text-3xl font-bold text-white p-2 border-b-4 border-[#00dddd] w-fit mx-auto mb-10 hover:text-[#f3ca24] hover:scale-105 hover:shadow-2xl transition duration-300">Proyectos</h2>
+            <button id="menuToggle" class="md:hidden text-white focus:outline-none z-50" aria-label="Abrir menú"
+                aria-expanded="false" aria-controls="navMenuMobile">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="line line-top"
+                        d="M4 6h16"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="line line-middle"
+                        d="M4 12h16"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="line line-bottom"
+                        d="M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
 
-  <!-- Cards -->
-  <div class="flex flex-wrap gap-6 justify-center -mb-40 z-10 relative">
-    <!-- Card 1 -->
-    <article class="w-80 bg-white p-6 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300">
-      <img src="https://digital-xen.com/proyectos/igei/new/uploads/Logos%20Igei%20New/Logo%20simplificado/Logo%20Igei%20simplificado.svg" alt="Xen Basic" class="w-24 h-24 mx-auto mb-4 object-contain shadow-lg" />
-      <h3 class="text-xl font-bold text-[#00004F] mb-2">Grupo Igei</h3>
-      <p class="text-sm mb-4">Desarrollo de pagina web, con la implementacion de un servicio de productividad y trabajo en linea.</p>
-      <a href="/proyectos/igei" class="inline-block bg-[#00004F] text-[#00dddd] font-bold px-4 py-2 rounded hover:bg-[#00dddd] hover:text-white transition">Ver más</a>
-    </article>
+        <div id="navMenuMobile" class="md:hidden absolute top-full left-0 w-full bg-gray-900/80 backdrop-blur-sm 
+                opacity-0 -translate-y-4 pointer-events-none 
+                transition-all duration-300 ease-in-out">
+            <nav class="flex flex-col items-center gap-6 font-semibold py-8">
+                <a href="#inicio" class="mobile-link">Inicio</a>
+                <a href="#quienes" class="mobile-link">Nosotros</a>
+                <a href="#servicios" class="mobile-link">Servicios</a>
+                <a href="#proyectos" class="mobile-link">Proyectos</a>
+                <a href="#planes" class="mobile-link">Planes</a>
+                <a href="#contacto" class="mobile-link">Contacto</a>
+            </nav>
+        </div>
+    </header>
 
-    <!-- Card 2 -->
-    <article class="w-80 bg-white p-6 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300">
-      <img src="https://digital-xen.com/uploads/svg/Logo-Xen.svg" alt="Xen Ecommerce" class="w-24 h-24 mx-auto mb-4 object-contain" />
-      <h3 class="text-xl font-bold text-[#00004F] mb-2">Proyecto 2</h3>
-      <p class="text-sm mb-4">Diseñado para empresas que necesitan una plataforma robusta para ventas en línea.</p>
-      <a href="/proyectos" class="inline-block bg-[#00004F] text-[#00dddd] font-bold px-4 py-2 rounded hover:bg-[#00dddd] hover:text-white transition">Ver más</a>
-    </article>
+    <main>
+        <section id="inicio" class="text-center py-24 px-4 bg-[var(--color-fondo-claro)]">
+            <div class="max-w-3xl mx-auto flex flex-col gap-6 items-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-[var(--color-primario)]">Impulsa tu Negocio al Mundo
+                    Digital</h1>
+                <p class="text-lg md:text-xl text-slate-600">Soluciones web a la medida para que tu empresa crezca y
+                    evolucione con tecnología.</p>
+                <a href="#servicios"
+                    class="inline-block bg-[var(--color-acento)] text-black font-bold px-8 py-3 rounded-lg hover:bg-[var(--color-acento-amarillo)] transition-transform hover:scale-105">Conoce
+                    Nuestros Servicios</a>
+            </div>
+        </section>
 
-    <!-- Card 3 -->
-    <article class="w-80 bg-white p-6 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300">
-      <img src="https://digital-xen.com/uploads/svg/Logo-Xen.svg" alt="Xen PYMES" class="w-24 h-24 mx-auto mb-4 object-contain" />
-      <h3 class="text-xl font-bold text-[#00004F] mb-2">Proyecto 3.</h3>
-      <p class="text-sm mb-4">Para empresas que buscan soluciones avanzadas, integraciones y escalabilidad.</p>
-      <a href="/proyectos" class="inline-block bg-[#00004F] text-[#00dddd] font-bold px-4 py-2 rounded hover:bg-[#00dddd] hover:text-white transition">Ver más</a>
-    </article>
-  </div>
-</section>
-  <!-- PLANES -->
-<section id="planes" class="relative bg-[#f7f8fa] pt-56 pb-20 px-6 text-center z-0">
-    <!-- Botón adicional -->
-  <div class="mb-10 z-20 relative">
-    <a href="/proyectos" class="bg-[#00004F] text-[#00dddd] font-bold px-6 py-3 rounded-lg hover:bg-[#00dddd] hover:text-white transition">Ver más proyectos</a>
-  </div>
+        <section id="quienes" class="py-20 px-6 text-center">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-primario)] mb-6">¿Quiénes Somos?</h2>
+                <p class="text-lg text-slate-700 leading-relaxed">
+                    En <strong class="text-[var(--color-primario)]">Xen Digital</strong>, diseñamos, desarrollamos e
+                    integramos plataformas digitales que impulsan a pymes y emprendedores en su transformación digital.
+                    Automatizamos procesos, mejoramos la experiencia del cliente y fortalecemos tu presencia en
+                    internet.
+                </p>
+            </div>
+        </section>
 
-    <h2 class="text-3xl font-bold text-[#00004F] p-2 mb-8  border-b-4 border-[#00dddd]  hover:text-[#f3ca24] w-fit mx-auto hover:scale-105 hover:shadow-2xl transition duration-300">Planes de servicio</h2>
-<!-- TOGGLE -->
-<div class="flex justify-center items-center gap-4 mb-6">
-  <span class="text-[#00dddd]">Mensual</span>
+        <section id="servicios" class="bg-[var(--color-fondo-claro)] py-20 px-6">
+            <div class="container mx-auto max-w-7xl">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Nuestros Servicios</h2>
 
-  <label class="relative inline-block w-[50px] h-[24px]" aria-label="Cambiar tipo de facturación">
-    <input type="checkbox" id="billingToggle" onchange="toggleBilling()" class="peer opacity-0 w-0 h-0" />
-    <span class="absolute inset-0 bg-gray-300 rounded-full cursor-pointer transition peer-checked:bg-[#00FFFF]"></span>
-    <span class="absolute left-[3px] bottom-[3px] w-[18px] h-[18px] bg-white rounded-full transition peer-checked:translate-x-[26px]"></span>
-  </label>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
 
-  <span class="text-[#00dddd]">Anual</span>
-</div>
+                    <article
+                        class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-blue-600 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Páginas Web 🌐</h3>
+                            <p class="text-gray-600 mb-6">Sitios informativos para presentar tu marca, captar prospectos
+                                y establecer tu presencia online.</p>
+                            <ul class="space-y-4 mb-6">
+                                <li class="flex items-center text-gray-800 pb-3 border-b border-gray-100"><svg
+                                        class="w-6 h-6 text-blue-600 mr-3 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Sitio web institucional</li>
+                                <li class="flex items-center text-gray-800 pb-3 border-b border-gray-100"><svg
+                                        class="w-6 h-6 text-blue-600 mr-3 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Hosting y Dominio (.com)</li>
+                                <li class="flex items-center text-gray-800"><svg
+                                        class="w-6 h-6 text-blue-600 mr-3 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Soporte técnico</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <button data-toggle="servicio1"
+                                class="bg-[var(--color-acento-amarillo)] text-black font-bold mt-auto px-4 py-2 rounded hover:bg-[var(--color-acento)] w-full">Ver
+                                Más</button>
+                            <div id="servicio1"
+                                class="transition-all duration-500 ease-in-out max-h-0 overflow-hidden text-left mt-4 text-sm">
+                                <ul class="space-y-2 list-disc list-inside">
+                                    <li><strong>Fundamentales:</strong> Dominio, Hosting Compartido, Certificado SSL.
+                                    </li>
+                                    <li><strong>Diseño y Desarrollo:</strong> UI/UX, Diseño Responsivo, Frontend,
+                                        Implementación de CMS (WordPress).</li>
+                                    <li><strong>Funcionalidades:</strong> Formulario de Contacto, Mapa, Galería, Blog,
+                                        Redes Sociales.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
 
-<!-- Descuento general -->
-<p id="discount-message" class="text-[#f3ca24] font-bold mb-8 hidden text-center">20% de Descuento con Pago Anual</p>
+                    <article
+                        class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-green-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Aplicaciones Web ⚙️</h3>
+                            <p class="text-gray-600 mb-6">Sistemas interactivos con lógica de negocio y gestión de
+                                usuarios para realizar tareas específicas.</p>
+                            <ul class="space-y-4 mb-6">
+                                <li class="flex items-center text-gray-800 pb-3 border-b border-gray-100"><svg
+                                        class="w-6 h-6 text-green-500 mr-3 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Sistemas de Registro y Login</li>
+                                <li class="flex items-center text-gray-800 pb-3 border-b border-gray-100"><svg
+                                        class="w-6 h-6 text-green-500 mr-3 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Paneles de Control (Dashboards)</li>
+                                <li class="flex items-center text-gray-800"><svg
+                                        class="w-6 h-6 text-green-500 mr-3 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Procesamiento de Datos</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <button data-toggle="servicio2"
+                                class="bg-[var(--color-acento-amarillo)] text-black font-bold mt-auto px-4 py-2 rounded hover:bg-[var(--color-acento)] w-full">Ver
+                                Más</button>
+                            <div id="servicio2"
+                                class="transition-all duration-500 ease-in-out max-h-0 overflow-hidden text-left mt-4 text-sm">
+                                <ul class="space-y-2 list-disc list-inside">
+                                    <li><strong>Fundamentales:</strong> Dominio, Hosting VPS/Cloud, Certificado SSL.
+                                    </li>
+                                    <li><strong>Diseño y Desarrollo:</strong> UI/UX Avanzado, Backend (PHP, Python),
+                                        Frontend (React, Vue), Bases de Datos.</li>
+                                    <li><strong>Funcionalidades:</strong> Login, Perfiles, Dashboards, CRUD, APIs, Roles
+                                        y Permisos.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
 
-<!-- PLAN CARDS -->
-<div class="flex flex-wrap gap-6 justify-center">
-  <!-- Basic -->
-  <article class="bg-white w-80 p-6 rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition">
-    <h3 class="text-xl font-bold text-[#00004F] mb-2">Plan Basic</h3>
-    <p>Ideal para emprendedores que desean establecer una imagen digital sólida desde el inicio.</p>
-    <p class="font-bold text-[#00004F] mt-4 price" data-monthly="52000" data-annual="500000"></p>
-    <p id="saving-basic" class="text-[#00AA00] font-semibold mt-2 hidden">¡Ahorra $124,000 al año!</p>
-    <button data-toggle="plan1" class="bg-[#f3ca24] text-[#00004F] font-bold mt-4 px-4 py-2 rounded hover:bg-[#00dddd]">Incluye</button>
-    <ul id="plan1" class="transition-all duration-500 ease-in-out max-h-0 overflow-hidden text-left list-disc list-inside mt-3">
-      <li>Sitio web institucional de hasta 5 secciones</li>
-      <li>Hosting compartido (1 año)</li>
-      <li>Dominio .com o .co (1 año)</li>
-      <li>Soporte técnico básico</li>
-    </ul>
-  </article>
+                    <article
+                        class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-purple-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Tienda Virtual 🛒</h3>
+                            <p class="text-gray-600 mb-6">Plataformas de E-commerce enfocadas en la conversión y
+                                seguridad para vender productos y servicios online.</p>
+                            <ul class="space-y-4 mb-6">
+                                <li class="flex items-center text-gray-800 pb-3 border-b border-gray-100"><svg
+                                        class="w-6 h-6 text-purple-500 mr-3 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Catálogo de Productos y Carrito</li>
+                                <li class="flex items-center text-gray-800 pb-3 border-b border-gray-100"><svg
+                                        class="w-6 h-6 text-purple-500 mr-3 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Pasarelas de Pago Seguras</li>
+                                <li class="flex items-center text-gray-800"><svg
+                                        class="w-6 h-6 text-purple-500 mr-3 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Gestión de Inventario</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <button data-toggle="servicio3"
+                                class="bg-[var(--color-acento-amarillo)] text-black font-bold mt-auto px-4 py-2 rounded hover:bg-[var(--color-acento)] w-full">Ver
+                                Más</button>
+                            <div id="servicio3"
+                                class="transition-all duration-500 ease-in-out max-h-0 overflow-hidden text-left mt-4 text-sm">
+                                <ul class="space-y-2 list-disc list-inside">
+                                    <li><strong>Fundamentales:</strong> Dominio, Hosting E-commerce, SSL.</li>
+                                    <li><strong>Plataformas:</strong> WooCommerce, Shopify.</li>
+                                    <li><strong>Funcionalidades:</strong> Catálogo, Carrito, Pagos (PayU, Mercado Pago),
+                                        Inventario, Pedidos, Cuentas de Cliente.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
 
-  <!-- Ecommerce -->
-  <article class="bg-white w-80 p-6 rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition">
-    <h3 class="text-xl font-bold text-[#00004F] mb-2">Plan Ecommerce</h3>
-    <p>Diseñado para empresas que necesitan una plataforma robusta para ventas en línea.</p>
-    <p class="font-bold text-[#00004F] mt-4 price" data-monthly="156300" data-annual="1500000"></p>
-    <p id="saving-ecommerce" class="text-[#00AA00] font-semibold mt-2 hidden">¡Ahorra $175,600 al año!</p>
-    <button data-toggle="plan2" class="bg-[#f3ca24] text-[#00004F] font-bold mt-4 px-4 py-2 rounded hover:bg-[#00dddd]">Incluye</button>
-    <ul id="plan2"  class="transition-all duration-500 ease-in-out max-h-0 overflow-hidden text-left list-disc list-inside mt-3">
-      <li>Todos los del Plan Basic</li>
-      <li>Tienda en línea</li>
-      <li>Pasarelas de pago</li>
-      <li>Gestión de inventario</li>
-      <li>Automatización y marketing</li>
-      <li>Capacitación básica</li>
-    </ul>
-  </article>
+                    <article
+                        class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-orange-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col">
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Automatización de Procesos 🤖</h3>
+                            <p class="text-gray-600 mb-6">Agentes y flujos de trabajo inteligentes para optimizar tareas
+                                repetitivas y mejorar la eficiencia de tu negocio.</p>
+                            <ul class="space-y-4 mb-6">
+                                <li class="flex items-center text-gray-800 pb-3 border-b border-gray-100"><svg
+                                        class="w-6 h-6 text-orange-500 mr-3 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Agentes de servicio al cliente</li>
+                                <li class="flex items-center text-gray-800 pb-3 border-b border-gray-100"><svg
+                                        class="w-6 h-6 text-orange-500 mr-3 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Agentes de ventas o reservas</li>
+                                <li class="flex items-center text-gray-800"><svg
+                                        class="w-6 h-6 text-orange-500 mr-3 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Respuestas automáticas</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <button data-toggle="servicio4"
+                                class="bg-[var(--color-acento-amarillo)] text-black font-bold mt-auto px-4 py-2 rounded hover:bg-[var(--color-acento)] w-full">Ver
+                                Más</button>
+                            <div id="servicio4"
+                                class="transition-all duration-500 ease-in-out max-h-0 overflow-hidden text-left mt-4 text-sm">
+                                <ul class="space-y-2 list-disc list-inside">
+                                    <li><strong>Tecnología:</strong> Plataformas de automatización (n8n, Zapier, Make).
+                                    </li>
+                                    <li><strong>Canales de Integración:</strong> WhatsApp, Email, Instagram, Facebook,
+                                        CRMs, y más.</li>
+                                    <li><strong>Funcionalidades:</strong> Flujos de trabajo personalizados,
+                                        Notificaciones en tiempo real, Sincronización de datos entre apps, Generación de
+                                        reportes automáticos.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
 
-  <!-- PYMES -->
-  <article class="bg-white w-80 p-6 rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition">
-    <h3 class="text-xl font-bold text-[#00004F] mb-2">Plan PYMES</h3>
-    <p>Para empresas que buscan soluciones avanzadas, integraciones y escalabilidad.</p>
-    <p class="font-bold text-[#00004F] mt-4 price" data-monthly="260500" data-annual="2500000"></p>
-    <p id="saving-pymes" class="text-[#00AA00] font-semibold mt-2 hidden">¡Ahorra $270,000 al año!</p>
-    <button data-toggle="plan3" class="bg-[#f3ca24] text-[#00004F] font-bold mt-4 px-4 py-2 rounded hover:bg-[#00dddd]">Incluye</button>
-    <ul id="plan3"  class="transition-all duration-500 ease-in-out max-h-0 overflow-hidden text-left list-disc list-inside mt-3">
-      <li>Todos los del Ecommerce</li>
-      <li>CRM o Dashboard personalizado</li>
-      <li>Licencias e integraciones</li>
-      <li>Soporte prioritario</li>
-      <li>Analítica avanzada</li>
-    </ul>
-  </article>
-</div>
-    <p class="text-sm text-gray-500 mt-6">* Todos los planes incluyen un costo base por diseño y configuración. El precio puede variar según requerimientos adicionales.</p>
-  </section>
-</main>
-  <!-- FOOTER -->
-  <footer id="contacto" class="bg-[#0d0d2e] text-white py-12 px-6">
-    <div class="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto text-center md:text-left">
-      <div class="flex flex-col items-center md:items-start">
-        <h3 class="text-xl font-bold mb-2">Xen Digital</h3>
-        <img src="https://digital-xen.com/uploads/svg/XenB.svg" alt="Logo Xen" class="w-[50%] mb-2" />
-      </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="relative bg-[var(--color-primario)] pt-20 text-center px-6">
+            <h2 class="text-3xl font-bold text-white p-2 border-b-4 border-[var(--color-acento)] w-fit mx-auto mb-12">
+                Proyectos Destacados</h2>
+
+            <div
+                class="container mx-auto max-w-7xl grid mt-24 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-50">
+                <article class="bg-white p-6 rounded-xl shadow-lg transition-transform hover:scale-105">
+                    <img src="https://digital-xen.com/proyectos/igei/new/uploads/Logos%20Igei%20New/Logo%20simplificado/Logo%20Igei%20simplificado.svg"
+                        alt="Logo Grupo Igei" class="h-20 mx-auto mb-4 object-contain" />
+                    <h3 class="text-xl font-bold text-[var(--color-primario)] mb-2">Grupo Igei</h3>
+                    <p class="text-sm text-slate-600 mb-4">Desarrollo de plataforma web para gestión de productividad y
+                        trabajo en línea.</p>
+                    <a href="#"
+                        class="font-bold text-[var(--color-primario)] hover:text-[var(--color-acento)] transition">Ver
+                        más &rarr;</a>
+                </article>
+                <article class="bg-white p-6 rounded-xl shadow-lg transition-transform hover:scale-105">
+                    <img src="https://digital-xen.com/uploads/svg/Logo-Xen.svg" alt="Logo Proyecto 2"
+                        class="h-20 mx-auto mb-4 object-contain" />
+                    <h3 class="text-xl font-bold text-[var(--color-primario)] mb-2">Proyecto E-commerce</h3>
+                    <p class="text-sm text-slate-600 mb-4">Diseño de una plataforma robusta y optimizada para la venta
+                        de productos en línea.</p>
+                    <a href="#"
+                        class="font-bold text-[var(--color-primario)] hover:text-[var(--color-acento)] transition">Ver
+                        más &rarr;</a>
+                </article>
+                <article class="bg-white p-6 rounded-xl shadow-lg transition-transform hover:scale-105">
+                    <img src="https://digital-xen.com/uploads/svg/Logo-Xen.svg" alt="Logo Proyecto 3"
+                        class="h-20 mx-auto mb-4 object-contain" />
+                    <h3 class="text-xl font-bold text-[var(--color-primario)] mb-2">Solución PYMES</h3>
+                    <p class="text-sm text-slate-600 mb-4">Implementación de soluciones avanzadas con integraciones y
+                        alta escalabilidad.</p>
+                    <a href="#"
+                        class="font-bold text-[var(--color-primario)] hover:text-[var(--color-acento)] transition">Ver
+                        más &rarr;</a>
+                </article>
+            </div>
+        </section>
+        <div id="planes" class="bg-[var(--color-fondo-claro)] pt-40 pb-20 px-6 text-center -mt-24">
+            <h2 class="text-3xl font-bold text-[var(--color-primario)] p-2 mb-4 w-fit mx-auto">Planes de Servicio</h2>
+
+            <div class="flex justify-center items-center gap-4 mb-4">
+                <span class="font-semibold">Mensual</span>
+                <label class="relative inline-block w-12 h-6 cursor-pointer"><input type="checkbox" id="billingToggle"
+                        class="peer opacity-0 w-0 h-0" /><span
+                        class="absolute inset-0 bg-gray-300 rounded-full transition peer-checked:bg-blue-500"></span><span
+                        class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-6"></span></label>
+                <span class="font-semibold">Anual</span>
+            </div>
+            <p id="discount-message" class="text-[#f3ca24] font-bold mb-8 hidden text-center">20% de Descuento con Pago
+                Anual</p>
+
+            <div class="flex flex-wrap gap-8 justify-center">
+                <article
+                    class="bg-white w-full max-w-sm p-8 rounded-xl shadow-lg hover:shadow-2xl transition text-left">
+                    <h3 class="text-xl font-bold text-[var(--color-primario)] mb-2">Plan Basic</h3>
+                    <p class="text-slate-600">Ideal para emprendedores que desean establecer su imagen digital.</p>
+                    <p class="font-bold text-3xl text-[var(--color-primario)] my-4 price" data-monthly="52000"
+                        data-annual="500000"></p>
+                    <p id="saving-basic" class="text-green-600 font-semibold h-6 mb-4 transition-opacity opacity-0"></p>
+                    <button data-toggle="plan1-details" class="font-bold text-blue-600">Ver detalles</button>
+                    <ul id="plan1-details"
+                        class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden text-left list-disc list-inside mt-3">
+                        <li>Sitio web institucional</li>
+                        <li>Hosting y Dominio (1 año)</li>
+                        <li>Soporte técnico</li>
+                    </ul>
+                </article>
+                <article
+                    class="bg-white w-full max-w-sm p-8 rounded-xl shadow-lg hover:shadow-2xl transition text-left">
+                    <h3 class="text-xl font-bold text-[var(--color-primario)] mb-2">Plan Ecommerce</h3>
+                    <p class="text-slate-600">Para empresas que necesitan una plataforma robusta para ventas online.</p>
+                    <p class="font-bold text-3xl text-[var(--color-primario)] my-4 price" data-monthly="156300"
+                        data-annual="1500000"></p>
+                    <p id="saving-ecommerce" class="text-green-600 font-semibold h-6 mb-4 transition-opacity opacity-0">
+                    </p>
+                    <button data-toggle="plan2-details" class="font-bold text-blue-600">Ver detalles</button>
+                    <ul id="plan2-details"
+                        class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden text-left list-disc list-inside mt-3">
+                        <li>Todo lo del Plan Basic</li>
+                        <li>Tienda en línea</li>
+                        <li>Pasarelas de pago</li>
+                        <li>Gestión de inventario</li>
+                    </ul>
+                </article>
+                <article
+                    class="bg-white w-full max-w-sm p-8 rounded-xl shadow-lg hover:shadow-2xl transition text-left">
+                    <h3 class="text-xl font-bold text-[var(--color-primario)] mb-2">Plan PYMES</h3>
+                    <p class="text-slate-600">Soluciones avanzadas, integraciones y alta escalabilidad.</p>
+                    <p class="font-bold text-3xl text-[var(--color-primario)] my-4 price" data-monthly="260500"
+                        data-annual="2500000"></p>
+                    <p id="saving-pymes" class="text-green-600 font-semibold h-6 mb-4 transition-opacity opacity-0"></p>
+                    <button data-toggle="plan3-details" class="font-bold text-blue-600">Ver detalles</button>
+                    <ul id="plan3-details"
+                        class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden text-left list-disc list-inside mt-3">
+                        <li>Todo lo de Ecommerce</li>
+                        <li>CRM o Dashboard</li>
+                        <li>Integraciones avanzadas</li>
+                        <li>Soporte prioritario</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <footer id="contacto" class="bg-[var(--color-primario)] text-white py-16 px-6">
+        <div class="container mx-auto max-w-7xl grid md:grid-cols-2 gap-12 text-center md:text-left">
             <div class="flex flex-col items-center md:items-start">
-        <h3 class="text-xl font-bold mb-4">Contáctanos</h3>
-     <form id="contactForm" class="flex flex-col gap-3 w-full max-w-s" method="post" >
-        <input type="text" name="nombre" placeholder="Tu nombre" required class="p-3 rounded bg-white text-black" />
-        <input type="email" name="correo" placeholder="Tu correo" required class="p-3 rounded bg-white text-black" />
-        <textarea name="mensaje" rows="2" placeholder="Tu mensaje..." required class="p-3 rounded bg-white text-black"></textarea>
-<button id="btnEnviar" type="submit" class="bg-[#00FFFF] justify-center text-[#00004F] font-bold p-3 rounded hover:bg-[#f3ca24] transition flex items-center gap-2">
-  <span id="btnText">Enviar</span>
-  <svg id="spinner" class="w-5 h-5 animate-spin hidden" fill="none" viewBox="0 0 24 24">
-    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="#00004F" stroke-width="4"></circle>
-    <path class="opacity-75" fill="#00004F" d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 100 16v-4l-3 3 3 3v-4a8 8 0 01-8-8z"></path>
-  </svg>
-</button>
+                <h3 class="text-2xl font-bold mb-4">Hablemos de tu Proyecto</h3>
+                <p class="text-slate-400 mb-6">Completa el formulario y nuestro equipo se pondrá en contacto contigo
+                    para transformar tu idea en una realidad digital.</p>
+                <div class="text-left space-y-3">
+                    <p>📍 Cali, Colombia</p>
+                    <p>🕒 <strong>Horario:</strong> Lun-Vie: 8:00 am - 5:00 pm</p>
+                    <p>📧 <strong>Email:</strong> <a href="mailto:info@digital-xen.com"
+                            class="text-[var(--color-acento)] hover:text-[var(--color-acento-amarillo)] transition">info@digital-xen.com</a>
+                    </p>
+                    <div
+                        class="container mx-auto mt-8 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between text-center md:text-left">
 
-        <p id="respuesta" class="text-sm mt-2"></p>
-      </form>
-      </div>
-      <div class="flex flex-col items-center md:items-start">
-        <h3 class="text-xl font-bold mb-4">Información</h3>
-        <p>Cali, Colombia</p>
-        <p><strong>Horario:</strong> Lun-Vie: 8:00 am - 5:00 pm</p>
-        <p><strong>Email:</strong> <a href="mailto:info@digital-xen.com" class="no-underline text-[#f3ca24] hover:text-[#00dddd]">info@digital-xen.com</a></p>
-      </div>
-    </div>
-    <div class="text-center text-sm mt-10 text-gray-400">&copy; 2025 Xen Digital. Todos los derechos reservados.</div>
-  </footer>
+                        <div class="mb-6 md:mb-0">
+                            <h4 class="font-bold text-white mb-3 uppercase tracking-wider">Legal</h4>
+                            <nav class="flex flex-col space-y-2">
+                                <a href="./legal/politica-privacidad.html"
+                                    class="text-slate-400 hover:text-[var(--color-acento)] transition-colors">Política
+                                    de Privacidad</a>
+                                <a href="./legal/terminos-condiciones.html"
+                                    class="text-slate-400 hover:text-[var(--color-acento)] transition-colors">Términos y
+                                    Condiciones</a>
+                            </nav>
+                        </div>
 
-<script src="js/landing.js"></script>
+                        <div class="mb-6 md:mb-0 ml-5">
+                            <h4 class="font-bold text-white mb-3 ml uppercase tracking-wider">Enlaces de Interés</h4>
+                            <nav class="flex flex-col space-y-2">
+                                <a href="./servicios"
+                                    class="text-slate-400 hover:text-[var(--color-acento)] transition-colors">Nuestros
+                                    Servicios</a>
+                                <a href="./proyectos"
+                                    class="text-slate-400 hover:text-[var(--color-acento)] transition-colors">Proyectos</a>
+                                <a href="./secure/"
+                                    class="text-slate-400 hover:text-[var(--color-acento)] transition-colors">Iniciar
+                                    Sesión</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form id="contactForm" class="flex flex-col gap-4 w-full bg-[var(--color-primario)] p-8 rounded-lg">
+                <input type="text" name="nombre" placeholder="Tu nombre" required
+                    class="p-3 rounded-md bg-[#0A192F] text-white border-2 border-transparent focus:border-[var(--color-acento)] focus:outline-none transition" />
+                <input type="email" name="correo" placeholder="Tu correo" required
+                    class="p-3 rounded-md bg-[#0A192F] text-white border-2 border-transparent focus:border-[var(--color-acento)] focus:outline-none transition" />
+                <textarea name="mensaje" rows="4" placeholder="Cuéntanos sobre tu proyecto..." required
+                    class="p-3 rounded-md bg-[#0A192F] text-white border-2 border-transparent focus:border-[var(--color-acento)] focus:outline-none transition"></textarea>
+                <div class="flex items-start gap-3 mt-4">
+                    <input type="checkbox" id="legal-consent" name="legal-consent" required
+                        class="mt-1 h-4 w-4 rounded border-gray-300 text-[var(--color-primario)] focus:ring-[var(--color-primario)] cursor-pointer">
+                    <label for="legal-consent" class="text-sm text-slate-600 text-white"> He leído y acepto los <a
+                            href="./legal/terminos-condiciones.html" target="_blank" rel="noopener noreferrer"
+                            class="underline font-semibold text-[var(--color-acento)] hover:text-blue-800">Términos y
+                            Condiciones</a> y la
+                        <a href="./legal/politica-privacidad.html" target="_blank" rel="noopener noreferrer"
+                            class="underline font-semibold text-[var(--color-acento)] hover:text-blue-800">
+                            Política de Privacidad
+                        </a>.
+                    </label>
+                </div>
+                <button id="btnEnviar" type="submit"
+                    class="bg-[var(--color-acento)] justify-center text-black font-bold p-3 rounded hover:bg-[var(--color-acento-amarillo)] transition flex items-center gap-2">
+                    <span id="btnText">Enviar Mensaje</span>
+                    <svg id="spinner" class="w-5 h-5 animate-spin hidden" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                        </circle>
+                        <path class="opacity-75" fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                        </path>
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <div class="text-center text-sm mt-12 text-gray-400">&copy; 2025 Xen Digital. Todos los derechos reservados.
+        </div>
+    </footer>
+
+
 </body>
+
 </html>

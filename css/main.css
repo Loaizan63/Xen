@@ -1,0 +1,11 @@
+        :root {
+            --color-primario: #00004F;      /* Azul naval oscuro */
+            --color-acento: #00FFFF;       /* Cian brillante */
+            --color-acento-amarillo: #f3ca24;
+            --color-texto-claro: #CCD6F6;
+            --color-texto-oscuro: #1E293B;
+            --color-fondo-claro: #f8fafc;
+        }
+        html {
+            font-family: 'Poppins', sans-serif;
+        }
