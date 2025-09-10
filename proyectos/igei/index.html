@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Proyecto Igei</title>
+  <link rel="icon" href="https://digital-xen.com/uploads/svg/XenB.svg" type="image/svg+xml" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/landing.cs">
+
+</head>
+
+<body class="bg-[#00004F] text-[#1c1c1c] font-sans">
+
+  <!-- HEADER -->
+<header class="sticky top-0 z-[999] bg-black/20 backdrop-blur text-[#00FFFF] p-4 flex flex-col md:flex-row justify-between items-center">
+  <!-- Logo -->
+  <img src="https://digital-xen.com/uploads/svg/xen-horizontal-blanco.svg" alt="Logo de Xen Digital" class="w-[200px] md:w-[180px] p-4" />
+
+  <!-- Título del proyecto -->
+  <div class="text-center mt-4 md:mt-0">
+    <h2 class="text-2xl md:text-3xl font-bold text-white p-2 border-b-4 border-[#00dddd] w-fit mx-auto">
+      Proyecto de renovación de la página web
+    </h2>
+    <h2 class="text-2xl md:text-3xl font-bold text-white">
+      Grupo IGEI
+    </h2>
+  </div>
+</header>
+
+<main>
+
+  <!-- QUIÉNES SOMOS -->
+  <section id="quienes" class="bg-[#f7f8fa] py-16 text-center px-6">
+    <h2 class="text-3xl font-bold text-[#00004F] mb-6">Grupo De ingenieria e infraestructura Grupo IGEI</h2>
+    <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+   Desde <strong>Xen Digital</strong> hemos diseñado esta página web con un enfoque moderno, atractivo y funcional, como parte del proceso de renovación digital de <strong>Grupo IGEI</strong>. El objetivo es resaltar sus especialidades, destacar la amplia gama de servicios que ofrecen y proyectar su trayectoria y experiencia en el sector de la ingeniería y la construcción.
+    </p>
+  </section>
+
+<!-- SECCIÓN PROYECTOS -->
+<section id="proyectos" class="relative bg-[#00004F] pt-16 pb-0 text-center px-6">
+  <!-- Título -->
+  <h2 class="text-3xl font-bold text-white p-2 border-b-4 border-[#00dddd] w-fit mx-auto mb-10">Propuestas</h2>
+
+  <!-- Cards -->
+  <div class="flex flex-wrap gap-6 justify-center -mb-40 z-10 relative">
+    <!-- Card 1 -->
+    <article class="w-80 bg-white p-6 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300">
+      <img src="https://digital-xen.com/uploads/svg/Logo-Xen.svg" alt="Xen Basic" class="w-24 h-24 mx-auto mb-4 object-contain" />
+      <h3 class="text-xl font-bold text-[#00004F] mb-2">Propuesta 1</h3>
+      <p class="text-sm mb-4">Muestra a la marca con la identidad visual actual.</p>
+      <a href="./static" class="inline-block bg-[#00004F] text-[#00dddd] font-bold px-4 py-2 rounded hover:bg-[#00dddd] hover:text-white transition">Ver más</a>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="w-80 bg-white p-6 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300">
+      <img src="https://digital-xen.com/uploads/svg/Logo-Xen.svg" alt="Xen Ecommerce" class="w-24 h-24 mx-auto mb-4 object-contain" />
+      <h3 class="text-xl font-bold text-[#00004F] mb-2">Propuesta 2</h3>
+      <p class="text-sm mb-4">Se expresa de una manera mucho mas actual, con una propuesta nueva de identidad.</p>
+      <a href="./new" class="inline-block bg-[#00004F] text-[#00dddd] font-bold px-4 py-2 rounded hover:bg-[#00dddd] hover:text-white transition">Ver más</a>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="w-80 bg-white p-6 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300">
+      <img src="https://digital-xen.com/uploads/svg/Logo-Xen.svg" alt="Xen PYMES" class="w-24 h-24 mx-auto mb-4 object-contain" />
+      <h3 class="text-xl font-bold text-[#00004F] mb-2">Propuesta de nueva identidad </h3>
+      <p class="text-sm mb-4">Para empresas que buscan soluciones avanzadas, integraciones y escalabilidad.</p>
+      <a href="./proyectos" class="inline-block bg-[#00004F] text-[#00dddd] font-bold px-4 py-2 rounded hover:bg-[#00dddd] hover:text-white transition">Ver más</a>
+    </article>
+  </div>
+</section>
+  <!-- PLANES -->
+<section id="planes" class="relative bg-[#f7f8fa] pt-56 pb-20 px-6 text-center z-0">
+
+
+    <h2 class="text-3xl font-bold text-[#00004F] p-2 mb-8  border-b-4 border-[#00dddd] w-fit mx-auto">Planes de servicio</h2>
+
+<!-- TOGGLE -->
+<div class="flex justify-center items-center gap-4 mb-6">
+  <span class="text-[#00dddd]">Mensual</span>
+
+  <label class="relative inline-block w-[50px] h-[24px]" aria-label="Cambiar tipo de facturación">
+    <input type="checkbox" id="billingToggle" onchange="toggleBilling()" class="peer opacity-0 w-0 h-0" />
+    <span class="absolute inset-0 bg-gray-300 rounded-full cursor-pointer transition peer-checked:bg-[#00FFFF]"></span>
+    <span class="absolute left-[3px] bottom-[3px] w-[18px] h-[18px] bg-white rounded-full transition peer-checked:translate-x-[26px]"></span>
+  </label>
+
+  <span class="text-[#00dddd]">Anual</span>
+</div>
+
+
+    <p id="saving-basic" class="text-[#f3ca24] font-bold mb-8"> 20% de Descuento con Pago Anual</p>
+
+    <!-- PLAN CARDS -->
+    <div class="flex flex-wrap gap-6 justify-center">
+      <!-- Basic -->
+      <article class="bg-white p-6 rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition  border-b-4 border-[#00dddd] w-fit mx-auto">
+        <h3 class="text-xl font-bold text-[#00004F] mb-2">Plan Basic</h3>
+        <p>Ideal para empresas que desean establecer una imagen digital sólida desde el inicio.</p>
+        <p class="font-bold text-[#00004F] mt-4 price" data-monthly="52000" data-annual="500000"></p>
+        <button onclick="toggleMenu('plan1')" class="bg-[#f3ca24] text-[#00004F] font-bold mt-4 px-4 py-2 rounded hover:bg-[#00dddd]">Incluye</button>
+        <ul id="plan1" class="hidden text-left list-disc list-inside mt-3">
+          <li>Sitio web institucional de hasta 5 secciones</li>
+          <li>Hosting compartido (1 año)</li>
+          <li>Dominio .com o .co (1 año)</li>
+          <li>Soporte técnico básico</li>
+        </ul>
+      </article>
+</div>
+    <p class="text-sm text-gray-500 mt-6">* Todos los planes incluyen un costo base por diseño y configuración. El precio puede variar según requerimientos adicionales.</p>
+  </section>
+</main>
+  <!-- FOOTER -->
+  <footer id="contacto" class="bg-[#0d0d2e] text-white py-12 px-6">
+    <div class="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto text-center md:text-left">
+      <div class="flex flex-col items-center md:items-start">
+        <h3 class="text-xl font-bold mb-2">Xen Digital</h3>
+        <img src="https://digital-xen.com/uploads/svg/XenB.svg" alt="Logo Xen" class="w-[50%] mb-2" />
+      </div>
+      <div class="flex flex-col items-center md:items-start">
+        <h3 class="text-xl font-bold mb-4">Contáctanos</h3>
+        <form class="flex flex-col gap-3 w-full max-w-sm">
+          <input type="text" placeholder="Tu nombre" required class="p-3 rounded bg-white text-black" />
+          <input type="email" placeholder="Tu correo" required class="p-3 rounded bg-white text-black" />
+          <textarea rows="2" placeholder="Tu mensaje..." required class="p-3 rounded bg-white text-black"></textarea>
+          <button type="submit" class="bg-[#00FFFF] text-[#00004F] font-bold p-3 rounded hover:bg-[#f3ca24]">Enviar</button>
+        </form>
+      </div>
+      <div class="flex flex-col items-center md:items-start">
+        <h3 class="text-xl font-bold mb-4">Información</h3>
+        <p>Cali, Colombia</p>
+        <p><strong>Cel: </strong> (315) 214 8074</p>
+        <p><strong>Horario:</strong> Lun-Vie: 8:00 am - 5:00 pm</p>
+        <p><strong>Email:</strong> <a href="mailto:info@digital-xen.com" class="no-underline text-[#f3ca24] hover:text-[#00dddd]">info@digital-xen.com</a></p>
+      </div>
+    </div>
+    <div class="text-center text-sm mt-10 text-gray-400">&copy; 2025 Xen Digital. Todos los derechos reservados.</div>
+  </footer>
+
+<script src="https://digital-xen.com/js/landing.js"></script>
+</body>
+</html>
